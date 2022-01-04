@@ -44,7 +44,7 @@ let me = {
 document.getElementById('name').textContent = me.name;
 
 // Step 2: Assign the value of the photo property as the src attribute of the HTML <img> element with an ID of photo
-document.getElementById('photo').setAttribute('src', me.photo);
+// document.getElementById('photo').setAttribute('src', me.photo);
 document.querySelector('#photo').setAttribute('width', 200)
 
 // Step 3: Assign the value of the name property as the alt attribute of the HTML <img> element with an ID of photo
