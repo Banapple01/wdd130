@@ -22,7 +22,7 @@
 
 let me = {
     name          : 'Jonathan Wright',
-    photo         : '../../week_2/images/profile_pic.jpg',
+    photo         : '../images/profile_pic.jpg',
     favoriteFoods : ['Chickfila Sandwich', 'soup', 'frenchtoast'],
     hobbies       : ['playing with my sons', 'spending time with my wife', 'video games with my brothers', 'coding'],
     placesLived   : [
