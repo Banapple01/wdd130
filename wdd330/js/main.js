@@ -12,6 +12,7 @@ links.forEach(e => {
     lab.textContent = e['label'];
     let ur = document.createElement('a')
     ur.setAttribute('src', e['url'])
+    ur.textContent = e['url']
     ol.appendChild(lab)
     ol.appendChild(ur)
 });
