@@ -9,10 +9,9 @@ const ol = document.querySelector('#weekly')
 links.forEach(e => {
     console.log(e)
     let lab = document.createElement('li')
-    lab.textContent = e['label'];
     let ur = document.createElement('a')
     ur.setAttribute('src', e['url'])
-    ur.textContent = e['url']
+    ur.textContent = e['label']
     lab.appendChild(ur)
     ol.appendChild(lab)
 });
