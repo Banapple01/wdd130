@@ -13,6 +13,6 @@ links.forEach(e => {
     let ur = document.createElement('a')
     ur.setAttribute('src', e['url'])
     ur.textContent = e['url']
+    lab.appendChild(ur)
     ol.appendChild(lab)
-    ol.appendChild(ur)
 });
