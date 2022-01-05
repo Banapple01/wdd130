@@ -5,7 +5,7 @@ const links = [
     }
 ]
 
-const ol = document.getElementById('weekly')
+const ol = document.querySelector('#weekly')
 links.forEach(e => {
     console.log(e)
     let lab = document.createElement('li').textContent = e['label'];
