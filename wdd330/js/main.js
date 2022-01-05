@@ -1,6 +1,6 @@
 const links = [
     {
-        label: "Week1 notes",
+        label: "Week 1 notes",
         url: "week1/index.html"
     }
 ]
@@ -10,8 +10,8 @@ links.forEach(e => {
     console.log(e)
     let lab = document.createElement('li')
     lab.textContent = e['label'];
-    let ur = document.createElement('li')
-    ur.textContent = e['url'];
+    let ur = document.createElement('a')
+    ur.setAttribute('src', e['url'])
     ol.appendChild(lab)
     ol.appendChild(ur)
 });
