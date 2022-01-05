@@ -5,6 +5,11 @@ const links = [
     }
 ]
 
+const ol = document.getElementById('weekly')
 links.forEach(e => {
     console.log(e)
+    let lab = document.createElement('li').textContent = e['label'];
+    let ur = document.createElement('li').textContent = e['url'];
+    ol.appendChild(lab)
+    ol.appendChild(ur)
 });
