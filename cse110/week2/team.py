@@ -1,5 +1,5 @@
 """
-File: week1.py
+File: team.py
 Author: Jonathan Wright
 
 Purpose: id card.

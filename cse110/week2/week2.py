@@ -1,5 +1,5 @@
 """
-File: week1.py
+File: week2.py
 Author: Jonathan Wright
 
 Purpose: input output.
