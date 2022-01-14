@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>BYUI Portfolio</title>
+	<link href="https://fonts.googleapis.com/css?family=Kalam&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <nav>
+        <ul id="menu">
+            <li><a id="toggleMenu">&equiv;</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#">WDD330</a></li>
+            <li><a href="../cse110/index.html">CSE110</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Weekly Work</h1>
+    </header>
+    <main>
+        <label for="num1">number 1</label>
+        <input name="num1" id="1" type="number">
+        <label for="num2">number 2</label>
+        <input name="num2" id="2" type="number">
+        <button onclick="input()">BigSum</button>
+        <button onclick="adding()">+</button>
+        <button onclick="multiply()">*</button>
+        <div id="out"></div>
+    </main>
+	<footer>
+        &copy;<span id="year"></span> BYUI Portfolio
+    </footer>
+    <script>
+        function input(){
+            let inp = document.getElementById('1').value
+            document.getElementById("out").innerHTML = bigsum(inp)
+        }
+
+        function bigsum(n) {
+            n = parseFloat(n)
+            let n2 = 0
+            for(i=n;i>0;i--){
+                n2 += i
+            }
+            return n2
+        }
+
+        adding = () => {
+            let inp = parseFloat(document.getElementById('1').value)
+            let inp2 = parseFloat(document.getElementById('2').value)
+
+            document.getElementById("out").innerHTML = inp + inp2
+        }
+
+        let multiply = function() {
+            let inp = parseFloat(document.getElementById('1').value)
+            let inp2 = parseFloat(document.getElementById('2').value)
+            
+            document.getElementById("out").innerHTML = inp * inp2
+        }
+    </script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
