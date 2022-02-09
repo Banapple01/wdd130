@@ -32,11 +32,6 @@ let completeButton = document.getElementById("complete").addEventListener("click
 })
 
 let form = document.getElementById("form")
-// if(form){
-//     console.log("yeet line 3")
-// } else {
-//     console.log("yert line 5")
-// }
 
 let items = []
 
