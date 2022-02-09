@@ -1,0 +1,13 @@
+{
+    "configurations": [
+        {
+            "name": "Launch Brave",
+            "request": "launch",
+            "type": "pwa-chrome",
+            "runtimeExecutable": "C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe",
+            "runtimeArgs": [ "--remote-debugging-port=9222" ],
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceFolder}",
+        }
+    ]
+}
