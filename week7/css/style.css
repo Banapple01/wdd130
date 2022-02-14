@@ -1,0 +1,33 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    background-color: #348ED8;
+}
+
+header, footer {
+    background-color: #fab230;
+    display: grid;
+    place-items: center;
+}
+
+.page {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+a {
+    color: #348ED8;
+}
+
+section img {
+    height: auto;
+    width: 30vh;
+}
+
+section {
+    display: flex;
+}

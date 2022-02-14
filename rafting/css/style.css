@@ -6,8 +6,10 @@
     line-height: normal;
 }
 
-/* body {
-} */
+body {
+    box-sizing: border-box;
+    background-color: #348ED8;
+}
 
 header, footer {
     background-color: #fab230;
@@ -20,7 +22,8 @@ header {
 }
 
 footer {
-    grid: 8vh / auto auto auto auto auto;
+    padding: 0 1vh;
+    grid: 8vh / auto auto 1fr auto auto auto;
     place-items: center;
 }
 
@@ -32,14 +35,11 @@ img {
     background-color: #348ED8;
     max-width: 960px;
     margin: 0 auto;
-}
-
-.item {
-    padding: 2vh 0vh;
+    padding: 2vh; 
 }
 
 main {
-    padding: 2vh 5vh;
+    padding: 2vh 0vh;
     display: grid;
 }
 
@@ -84,6 +84,74 @@ h1 {
     font-size: 2.5rem;
 }
 
+figure {
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+}
+
+.heroImg {
+    width: 100%;
+}
+
+#callTA {
+    position: absolute;
+    top: 23%;
+    background-color: #fab3309d;
+    padding: 3vh ;
+}
+
+.item {
+    margin: 2vh 0vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.3fr 1fr;
+    text-align: center;
+    background-color: #fab230;
+}
+
+.item .statement, .item p {
+    grid-column: 2/3;
+}
+
+#sect1 {
+    margin-bottom: 0;
+}
+
+#sect2 {
+    margin: 0;
+}
+
+#sect2 .statement, #sect2 p {
+    grid-column: 1/2;
+}
+
+.item img {
+    grid-row: 1/3;
+}
+
+#sect2 img {
+    grid-column: 2/3;
+}
+
+#sect3 {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 1fr;
+}
+
 .statement {
     font-size: 1.5rem;
+    padding: 5vh;
+    text-align: center;
+}
+
+#sect3 h4, #sect3 p {
+    padding: 0;
+    text-align: center;
+}
+
+.icon {
+    height: 50px;
+    width: 50px;
 }
