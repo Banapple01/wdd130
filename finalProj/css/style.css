@@ -5,11 +5,11 @@
 }
 
 body {
-    background-color: #348ED8;
+    background-color: #4dd172;
 }
 
 header, footer {
-    background-color: #fab230;
+    background-color: #ffbc1f;
     display: grid;
     place-items: center;
 }
@@ -20,7 +20,7 @@ header, footer {
 }
 
 a {
-    color: #348ED8;
+    color: #4dd172;
 }
 
 section img {
