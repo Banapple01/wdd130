@@ -118,7 +118,7 @@ function createItems(taskInput){
         taskItem.children[0].classList.add("notActive")
     }
     taskItem.children[0].addEventListener("click", (e) => {
-        let storage = localStorage.getItem('itemList')
+        let storage = JSON.parse(localStorage.getItem('itemList'))
         // let storage = JSON.parse(lstorage)
         let index = storage.findIndex(i=>i.id == taskInput.id)
         if(storage[index].completed == false){
@@ -130,19 +130,19 @@ function createItems(taskInput){
             taskItem.children[0].classList.remove("notActive")
             taskItem.children[0].classList.add("active")
         }
-        localStorage.setItem('itemList', storage)
+        localStorage.setItem('itemList', JSON.stringify(storage))
         // console.log(localStorage.getItem('items'), "line 86")
     })
     taskItem.children[1].addEventListener("click", (e) => {
         // let storage = JSON.parse(localStorage.getItem('items'))
-        let storage = localStorage.getItem('itemList')
+        let storage = JSON.parse(localStorage.getItem('itemList'))
         // console.log(storage, "line 99")
         let index = storage.findIndex(i=>i.id == taskInput.id)
         // console.log(index, "line 101")
         storage.splice(index, 1)
         // console.log(storage, "line 103")
         document.querySelector('ul').innerHTML = ''
-        localStorage.setItem('itemList', storage)
+        localStorage.setItem('itemList', JSON.stringify(storage))
         // console.log(localStorage.getItem('items'), "line 92")
         displayLocalStorage()
         document.getElementById("tasksLeft").innerHTML = `Tasks Left: ${storage.length}`
