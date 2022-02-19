@@ -44,14 +44,14 @@ class todo {
 }
 
 function displayLocalStorage(){
-    localStorage.setItem('itemList', items);
+    localStorage.setItem('itemList', JSON.stringify(items));
     let storage = localStorage.getItem('itemList');
     // storage = JSON.parse(storage)
     // console.log(storage, "line 20")
     
     if (storage === null || storage.length == 0){
         items = [];
-        localStorage.setItem('itemList', items);
+        localStorage.setItem('itemList', JSON.stringify(items));
         // storage = JSON.parse(storage)
         // console.log("line 23")
         let todoList = document.querySelector('ul');
@@ -95,7 +95,7 @@ function storeItem(item){
     console.log(JSON.parse(itemList))
     items.push(item);
     console.log(items)
-    localStorage.setItem('itemList', items)
+    localStorage.setItem('itemList', JSON.stringify(items))
     document.getElementById("tasksLeft").innerHTML = `Tasks Left: ${items.length}`
 };
 
