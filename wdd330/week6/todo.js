@@ -140,9 +140,10 @@ function createItems(taskInput){
         let index = storage.findIndex(i=>i.id == taskInput.id)
         // console.log(index, "line 101")
         storage.splice(index, 1)
-        // console.log(storage, "line 103")
+        console.log(storage, "line 103")
         document.querySelector('ul').innerHTML = ''
         localStorage.setItem('itemList', JSON.stringify(storage))
+        items = storage
         // console.log(localStorage.getItem('items'), "line 92")
         displayLocalStorage()
         document.getElementById("tasksLeft").innerHTML = `Tasks Left: ${storage.length}`
