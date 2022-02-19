@@ -45,13 +45,13 @@ class todo {
 
 function displayLocalStorage(){
     let storage = localStorage.getItem('items');
-    storage = JSON.parse(storage)
+    // storage = JSON.parse(storage)
     // console.log(storage, "line 20")
     
     if (storage === null || storage.length == 0){
         items = [];
-        let storage = localStorage.setItem('items', items);
-        storage = JSON.parse(storage)
+        localStorage.setItem('items', items);
+        // storage = JSON.parse(storage)
         // console.log("line 23")
         let todoList = document.querySelector('ul');
         todoList.innerHTML = '';
@@ -116,8 +116,8 @@ function createItems(taskInput){
         taskItem.children[0].classList.add("notActive")
     }
     taskItem.children[0].addEventListener("click", (e) => {
-        let lstorage = localStorage.getItem('items')
-        let storage = JSON.parse(lstorage)
+        let storage = localStorage.getItem('items')
+        // let storage = JSON.parse(lstorage)
         let index = storage.findIndex(i=>i.id == taskInput.id)
         if(storage[index].completed == false){
             storage[index].completed = true
@@ -132,7 +132,8 @@ function createItems(taskInput){
         // console.log(localStorage.getItem('items'), "line 86")
     })
     taskItem.children[1].addEventListener("click", (e) => {
-        let storage = JSON.parse(localStorage.getItem('items'))
+        // let storage = JSON.parse(localStorage.getItem('items'))
+        let storage = localStorage.getItem('items')
         // console.log(storage, "line 99")
         let index = storage.findIndex(i=>i.id == taskInput.id)
         // console.log(index, "line 101")
