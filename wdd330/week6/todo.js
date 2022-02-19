@@ -44,14 +44,14 @@ class todo {
 }
 
 function displayLocalStorage(){
-    localStorage.setItem('items', items);
-    let storage = localStorage.getItem('items');
+    localStorage.setItem('itemList', items);
+    let storage = localStorage.getItem('itemList');
     // storage = JSON.parse(storage)
     // console.log(storage, "line 20")
     
     if (storage === null || storage.length == 0){
         items = [];
-        localStorage.setItem('items', items);
+        localStorage.setItem('itemList', items);
         // storage = JSON.parse(storage)
         // console.log("line 23")
         let todoList = document.querySelector('ul');
@@ -91,10 +91,10 @@ form.addEventListener("submit", function(e) {
 //function to store items in local storage
 function storeItem(item){
     // items = JSON.parse(localStorage.getItem('items'))
-    items = localStorage.getItem('items')
-    console.log(items)
+    itemList = localStorage.getItem('itemList')
+    console.log(itemList)
     items.push(item);
-    localStorage.setItem('items', JSON.stringify(items))
+    localStorage.setItem('itemList', items)
     document.getElementById("tasksLeft").innerHTML = `Tasks Left: ${items.length}`
 };
 
@@ -117,7 +117,7 @@ function createItems(taskInput){
         taskItem.children[0].classList.add("notActive")
     }
     taskItem.children[0].addEventListener("click", (e) => {
-        let storage = localStorage.getItem('items')
+        let storage = localStorage.getItem('itemList')
         // let storage = JSON.parse(lstorage)
         let index = storage.findIndex(i=>i.id == taskInput.id)
         if(storage[index].completed == false){
@@ -129,19 +129,19 @@ function createItems(taskInput){
             taskItem.children[0].classList.remove("notActive")
             taskItem.children[0].classList.add("active")
         }
-        localStorage.setItem('items',JSON.stringify(storage))
+        localStorage.setItem('itemList', storage)
         // console.log(localStorage.getItem('items'), "line 86")
     })
     taskItem.children[1].addEventListener("click", (e) => {
         // let storage = JSON.parse(localStorage.getItem('items'))
-        let storage = localStorage.getItem('items')
+        let storage = localStorage.getItem('itemList')
         // console.log(storage, "line 99")
         let index = storage.findIndex(i=>i.id == taskInput.id)
         // console.log(index, "line 101")
         storage.splice(index, 1)
         // console.log(storage, "line 103")
         document.querySelector('ul').innerHTML = ''
-        localStorage.setItem('items',JSON.stringify(storage))
+        localStorage.setItem('itemList', storage)
         // console.log(localStorage.getItem('items'), "line 92")
         displayLocalStorage()
         document.getElementById("tasksLeft").innerHTML = `Tasks Left: ${storage.length}`
