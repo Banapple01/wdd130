@@ -49,7 +49,7 @@ function displayLocalStorage(){
     // console.log(storage, "line 20")
     
     if (storage === null || storage.length == 0){
-        let storage = localStorage.setItem('items');
+        let storage = localStorage.setItem('items', JSON.stringify(items));
         storage = JSON.parse(storage)
         // console.log("line 23")
         items = [];
@@ -91,7 +91,7 @@ form.addEventListener("submit", function(e) {
 function storeItem(item){
     items = JSON.parse(localStorage.getItem('items'))
     items.push(item);
-    localStorage.setItem('items',JSON.stringify(items))
+    localStorage.setItem('items', JSON.stringify(items))
     document.getElementById("tasksLeft").innerHTML = `Tasks Left: ${items.length}`
 };
 
