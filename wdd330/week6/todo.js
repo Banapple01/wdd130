@@ -49,7 +49,7 @@ function displayLocalStorage(){
     // console.log(storage, "line 20")
     
     if (storage === null || storage.length == 0){
-        let storage = localStorage.setItem('items', JSON.stringify(items));
+        let storage = localStorage.setItem('items', items);
         storage = JSON.parse(storage)
         // console.log("line 23")
         items = [];
