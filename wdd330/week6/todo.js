@@ -44,6 +44,7 @@ class todo {
 }
 
 function displayLocalStorage(){
+    localStorage.setItem('items', items);
     let storage = localStorage.getItem('items');
     // storage = JSON.parse(storage)
     // console.log(storage, "line 20")
