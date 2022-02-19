@@ -92,8 +92,9 @@ form.addEventListener("submit", function(e) {
 function storeItem(item){
     // items = JSON.parse(localStorage.getItem('items'))
     itemList = localStorage.getItem('itemList')
-    console.log(itemList)
+    console.log(JSON.parse(itemList))
     items.push(item);
+    console.log(items)
     localStorage.setItem('itemList', items)
     document.getElementById("tasksLeft").innerHTML = `Tasks Left: ${items.length}`
 };
