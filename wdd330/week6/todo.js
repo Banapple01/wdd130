@@ -47,7 +47,7 @@ function displayLocalStorage(){
     localStorage.setItem('itemList', JSON.stringify(items));
     let storage = localStorage.getItem('itemList');
     // storage = JSON.parse(storage)
-    console.log(storage, "line 20")
+    // console.log(storage, "line 20")
     
     if (storage === null || storage == "[]"){
         items = [];
@@ -91,10 +91,10 @@ form.addEventListener("submit", function(e) {
 //function to store items in local storage
 function storeItem(item){
     // items = JSON.parse(localStorage.getItem('items'))
-    itemList = localStorage.getItem('itemList')
-    console.log(JSON.parse(itemList))
+    // itemList = localStorage.getItem('itemList')
+    // console.log(JSON.parse(itemList))
     items.push(item);
-    console.log(items)
+    // console.log(items)
     localStorage.setItem('itemList', JSON.stringify(items))
     document.getElementById("tasksLeft").innerHTML = `Tasks Left: ${items.length}`
 };
@@ -140,7 +140,7 @@ function createItems(taskInput){
         let index = storage.findIndex(i=>i.id == taskInput.id)
         // console.log(index, "line 101")
         storage.splice(index, 1)
-        console.log(storage, "line 103")
+        // console.log(storage, "line 103")
         document.querySelector('ul').innerHTML = ''
         localStorage.setItem('itemList', JSON.stringify(storage))
         items = storage
