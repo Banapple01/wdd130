@@ -49,6 +49,8 @@ function displayLocalStorage(){
     // console.log(storage, "line 20")
     
     if (storage === null || storage.length == 0){
+        let storage = localStorage.setItem('items');
+        storage = JSON.parse(storage)
         // console.log("line 23")
         items = [];
         let todoList = document.querySelector('ul');
