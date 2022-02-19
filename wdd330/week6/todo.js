@@ -47,9 +47,9 @@ function displayLocalStorage(){
     localStorage.setItem('itemList', JSON.stringify(items));
     let storage = localStorage.getItem('itemList');
     // storage = JSON.parse(storage)
-    // console.log(storage, "line 20")
+    console.log(storage, "line 20")
     
-    if (storage === null || storage.length == 0){
+    if (storage === null || storage == "[]"){
         items = [];
         localStorage.setItem('itemList', JSON.stringify(items));
         // storage = JSON.parse(storage)
@@ -60,7 +60,7 @@ function displayLocalStorage(){
         todoItem.innerHTML = `No more todos!`;
         todoList.appendChild(todoItem);
     } else {
-        let storageParsed = storage;
+        let storageParsed = JSON.parse(storage);
         storageParsed.forEach(function(storageItem){
             // console.log(storageItem, "line 27")
             createItems(storageItem);
