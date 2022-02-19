@@ -45,14 +45,14 @@ class todo {
 
 function displayLocalStorage(){
     let storage = localStorage.getItem('items');
-    storage = JSON.parse(storage)
+    // storage = JSON.parse(storage)
     // console.log(storage, "line 20")
     
     if (storage === null || storage.length == 0){
-        let storage = localStorage.setItem('items', items);
-        storage = JSON.parse(storage)
-        // console.log("line 23")
         items = [];
+        let storage = localStorage.setItem('items', items);
+        // storage = JSON.parse(storage)
+        // console.log("line 23")
         let todoList = document.querySelector('ul');
         todoList.innerHTML = '';
         let todoItem = document.createElement('li');
