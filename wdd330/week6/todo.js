@@ -45,13 +45,13 @@ class todo {
 
 function displayLocalStorage(){
     let storage = localStorage.getItem('items');
-    // storage = JSON.parse(storage)
+    storage = JSON.parse(storage)
     // console.log(storage, "line 20")
     
     if (storage === null || storage.length == 0){
         items = [];
         let storage = localStorage.setItem('items', items);
-        // storage = JSON.parse(storage)
+        storage = JSON.parse(storage)
         // console.log("line 23")
         let todoList = document.querySelector('ul');
         todoList.innerHTML = '';
@@ -91,6 +91,7 @@ form.addEventListener("submit", function(e) {
 function storeItem(item){
     // items = JSON.parse(localStorage.getItem('items'))
     items = localStorage.getItem('items')
+    console.log(items)
     items.push(item);
     localStorage.setItem('items', JSON.stringify(items))
     document.getElementById("tasksLeft").innerHTML = `Tasks Left: ${items.length}`
