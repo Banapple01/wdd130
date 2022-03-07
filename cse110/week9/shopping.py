@@ -19,7 +19,7 @@ while act != 5:
     if act == 1:
         item_details = []
         item = str(input("What item would you like to add? "))
-        price = "{:.2f}".format(float(input(f"What is the price of '{item}'? ")))
+        price = "{:.2f}".format(float(input(f"What is the price of '{item.title()}'? ")))
         item_details.append(item.capitalize())
         item_details.append(float(price))
         cart.append(item_details)
@@ -58,7 +58,7 @@ while act != 5:
             i = 0
             j=1
             for item in cart:
-                print(f"{j}. {item[0]} - ${item[1]}")
+                print(f"{j}. {item[0].title()} - ${item[1]}")
                 j+=1
                 i+=item[1]
             i = "{:.2f}".format(i)
