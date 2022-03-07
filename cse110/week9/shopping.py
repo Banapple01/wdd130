@@ -18,12 +18,15 @@ while act != 5:
     act = int(input("Please enter an action: "))
     if act == 1:
         item_details = []
-        item = str(input("What item would you like to add? "))
-        price = "{:.2f}".format(float(input(f"What is the price of '{item.title()}'? ")))
-        item_details.append(item.capitalize())
-        item_details.append(float(price))
-        cart.append(item_details)
-        print(f"'{item_details[0]}' has been added to the cart.\n")
+        item = str(input("What item would you like to add?  (0 to cancel): "))
+        if item != "0":
+            price = "{:.2f}".format(float(input(f"What is the price of '{item.title()}'? ")))
+            item_details.append(item.capitalize())
+            item_details.append(float(price))
+            cart.append(item_details)
+            print(f"'{item_details[0]}' has been added to the cart.\n")
+        else:
+            print("canceled\n")
     elif act == 2:
         if cart.__len__() != 0:
             i = 1
@@ -47,7 +50,7 @@ while act != 5:
                     cart.remove(cart[remove])
                     print(f"{confirm[0]} - ${confirm[1]} has been removed.\n")
                 except:
-                    print("There was a problem removing the item. Please ty again.\n")
+                    print("There was a problem removing the item. Please try again.\n")
             else:
                 print("canceled\n")
         else:
@@ -67,4 +70,4 @@ while act != 5:
             print("There are no items in your cart.")
         print("\n")
     else:
-        print("Thank you. Goodbye.\n")
+        print("Thanks for shopping with us!\n")
