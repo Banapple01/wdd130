@@ -61,6 +61,16 @@ nav ul li a:hover {
     color: black;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+ol {
+    list-style-type: none;
+}
+
 /* Class Selectors */
 .active {
     background-color: white;
