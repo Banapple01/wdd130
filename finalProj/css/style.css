@@ -20,6 +20,7 @@ header, footer {
     background-color: #053C5E;
     display: flex;
     width: 100%;
+    justify-content: center;
     /* margin: auto; */
     /* display: grid;
     place-items: center; */
