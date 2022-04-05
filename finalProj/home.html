@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-A-Tow</title>
+	<link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <!-- <div class="menu">
+            <input type="checkbox">
+            <span>Menu</span>
+        </div> -->
+        <div class="logoBox">
+            <img src="images/tow-truck.png" alt="website logo" class="logo">
+        </div>
+        <nav>
+            <a class="navigation" href="#">Home</a>
+            <a class="navigation" href="#">About Us</a>
+            <a class="navigation" href="#">How We Work</a>
+        </nav>
+    </header>
+    <main>
+        <form action="" method="post">
+            <section class="formChunk f1">
+                <div class="row">
+                    <h1 class="formStatement">What Is Your Vehicle's Location?</h1>
+                    <div class="textOnInput">
+                        <label class="aft" for="streetL">Street Address</label>
+                        <input id="streetL" type="text" name="streetL" id="streetL">
+                    </div>
+                    <div class="textOnInput">
+                        <label class="aft" for="cityL">City</label>
+                        <input id="cityL" type="text" name="cityL" id="cityL">
+                    </div>
+                    <div class="textOnInput">
+                        <label class="aft" for="stateL">State</label>
+                        <select id="stateL" name="stateL" id="stateL">
+                                <option value="AL">Alabama</option>
+                                <option value="AK">Alaska</option>
+                                <option value="AZ">Arizona</option>
+                                <option value="AR">Arkansas</option>
+                                <option value="CA">California</option>
+                                <option value="CO">Colorado</option>
+                                <option value="CT">Connecticut</option>
+                                <option value="DE">Delaware</option>
+                                <option value="DC">District Of Columbia</option>
+                                <option value="FL">Florida</option>
+                                <option value="GA">Georgia</option>
+                                <option value="HI">Hawaii</option>
+                                <option value="ID">Idaho</option>
+                                <option value="IL">Illinois</option>
+                                <option value="IN">Indiana</option>
+                                <option value="IA">Iowa</option>
+                                <option value="KS">Kansas</option>
+                                <option value="KY">Kentucky</option>
+                                <option value="LA">Louisiana</option>
+                                <option value="ME">Maine</option>
+                                <option value="MD">Maryland</option>
+                                <option value="MA">Massachusetts</option>
+                                <option value="MI">Michigan</option>
+                                <option value="MN">Minnesota</option>
+                                <option value="MS">Mississippi</option>
+                                <option value="MO">Missouri</option>
+                                <option value="MT">Montana</option>
+                                <option value="NE">Nebraska</option>
+                                <option value="NV">Nevada</option>
+                                <option value="NH">New Hampshire</option>
+                                <option value="NJ">New Jersey</option>
+                                <option value="NM">New Mexico</option>
+                                <option value="NY">New York</option>
+                                <option value="NC">North Carolina</option>
+                                <option value="ND">North Dakota</option>
+                                <option value="OH">Ohio</option>
+                                <option value="OK">Oklahoma</option>
+                                <option value="OR">Oregon</option>
+                                <option value="PA">Pennsylvania</option>
+                                <option value="RI">Rhode Island</option>
+                                <option value="SC">South Carolina</option>
+                                <option value="SD">South Dakota</option>
+                                <option value="TN">Tennessee</option>
+                                <option value="TX">Texas</option>
+                                <option value="UT" selected="">Utah</option>
+                                <option value="VT">Vermont</option>
+                                <option value="VA">Virginia</option>
+                                <option value="WA">Washington</option>
+                                <option value="WV">West Virginia</option>
+                                <option value="WI">Wisconsin</option>
+                                <option value="WY">Wyoming</option>
+                        </select>
+                    </div>
+                    <div class="textOnInput">
+                        <label class="aft" for="zipL">ZIP Code</label>
+                        <input type="text" name="zipL" id="zipL">
+                    </div>
+                    <button id="locButton" class="borders pn" type="button">Set Location</button>
+                </div>
+            </section>
+            <section class="formChunk f2">
+                <div class="row" id="destinationRow">
+                        <h2 class="formStatement">Where Should We Tow Your Vehicle?</h2>
+                    <div class="textOnInput">
+                        <label class="aft" for="street">Street Address</label>
+                        <input id="street" type="text" name="street" id="street">
+                    </div>
+                    <div class="textOnInput">
+                        <label class="aft" for="city">City</label>
+                        <input id="city" type="text" name="city" id="city">
+                    </div>
+                    <div class="textOnInput">
+                        <label class="aft" for="state">State</label>
+                        <select id="state" name="state" id="state">
+                            <option value="AL">Alabama</option>
+                            <option value="AK">Alaska</option>
+                            <option value="AZ">Arizona</option>
+                            <option value="AR">Arkansas</option>
+                            <option value="CA">California</option>
+                            <option value="CO">Colorado</option>
+                            <option value="CT">Connecticut</option>
+                            <option value="DE">Delaware</option>
+                            <option value="DC">District Of Columbia</option>
+                            <option value="FL">Florida</option>
+                            <option value="GA">Georgia</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="ID">Idaho</option>
+                            <option value="IL">Illinois</option>
+                            <option value="IN">Indiana</option>
+                            <option value="IA">Iowa</option>
+                            <option value="KS">Kansas</option>
+                            <option value="KY">Kentucky</option>
+                            <option value="LA">Louisiana</option>
+                            <option value="ME">Maine</option>
+                            <option value="MD">Maryland</option>
+                            <option value="MA">Massachusetts</option>
+                            <option value="MI">Michigan</option>
+                            <option value="MN">Minnesota</option>
+                            <option value="MS">Mississippi</option>
+                            <option value="MO">Missouri</option>
+                            <option value="MT">Montana</option>
+                            <option value="NE">Nebraska</option>
+                            <option value="NV">Nevada</option>
+                            <option value="NH">New Hampshire</option>
+                            <option value="NJ">New Jersey</option>
+                            <option value="NM">New Mexico</option>
+                            <option value="NY">New York</option>
+                            <option value="NC">North Carolina</option>
+                            <option value="ND">North Dakota</option>
+                            <option value="OH">Ohio</option>
+                            <option value="OK">Oklahoma</option>
+                            <option value="OR">Oregon</option>
+                            <option value="PA">Pennsylvania</option>
+                            <option value="RI">Rhode Island</option>
+                            <option value="SC">South Carolina</option>
+                            <option value="SD">South Dakota</option>
+                            <option value="TN">Tennessee</option>
+                            <option value="TX">Texas</option>
+                            <option value="UT" selected="">Utah</option>
+                            <option value="VT">Vermont</option>
+                            <option value="VA">Virginia</option>
+                            <option value="WA">Washington</option>
+                            <option value="WV">West Virginia</option>
+                            <option value="WI">Wisconsin</option>
+                            <option value="WY">Wyoming</option>
+                        </select>
+                    </div>
+                    <div class="textOnInput">
+                        <label class="aft" for="zip">ZIP Code</label>
+                        <input type="text" name="zip" id="zip">
+                    </div>
+                        <button id="destButton" class="borders pn" type="button">Set Destination</button>
+                </div>
+            </section>
+            <section class="formChunk f3">
+                <div class="row">
+                    <h3 class="formStatement">Vehicle Information</h3>
+                    <div class="textOnInput">
+                        <label class="aft"  for="color">Color</label>
+                        <input type="text" name="color" id="color">
+                    </div>
+                    <div class="textOnInput">
+                        <label class="aft"  for="year">Year</label>
+                        <input type="number" name="year" id="year">
+                    </div>
+                    <div class="textOnInput">
+                        <label class="aft"  for="make">Make</label>
+                        <input type="text" name="make" id="make">
+                    </div>
+                    <div class="textOnInput">
+                        <label class="aft"  for="model">Model</label>
+                        <input type="text" name="model" id="model">
+                    </div>
+                    <div class="textOnInput">
+                        <label class="aft"  for="other">Other Details (optional)</label>
+                        <input type="text" name="other" id="other">
+                    </div>
+                </div>
+            </section>
+            <section class="formChunk f4">
+                <div class="row">
+                    <h4 class="formStatement">Confirm Your Phone Number</h4>
+                    <div class="textOnInput">
+                        <label class="aft"  for="phoneNumber">Phone Number</label>
+                        <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="(000)-000-0000">
+                    </div>
+                    <div class="textOnInput">
+                        <label class="aft"  for="confPhone">Confirmation Code</label>
+                        <input type="number" name="confPhone" id="confPhone" placeholder="000000">
+                    </div>
+                </div>
+            </section>
+            <section class="formChunk f5">
+                <div class="row">
+                    <h5 class="formStatement">Personal Information</h5>
+                    <div class="textOnInput">
+                        <label class="aft"  for="firstName">First Name</label>
+                        <input type="text" name="firstName" id="firstName" placeholder="Your First Name">
+                    </div>
+                    <div class="textOnInput">
+                        <label class="aft"  for="lastName">Last Name</label>
+                        <input type="text" name="lastName" id="lastName" placeholder="Your Last Name">
+                    </div>
+                    <div class="textOnInput">
+                        <label class="aft"  for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="...@gmail.com">
+                    </div>
+                </div>
+            </section>
+            <section class="formChunk f6">
+                <div class="row">
+                    <h6 class="formStatement">Payment Information</h6>
+                    <div class="textOnInput">
+                        <label class="aft"  for="cardNumber">Card Number</label>
+                        <input type="text" name="cardNumber" id="cardNumber" placeholder="0000 0000 0000 0000">
+                    </div>
+                    <div class="textOnInput">
+                        <label class="aft"  for="date">MM/YY</label>
+                        <input type="date" name="date" id="date">
+                    </div>
+                    <div class="textOnInput">
+                        <label class="aft"  for="cvc">CVC</label>
+                        <input type="number" name="cvc" id="cvc" placeholder="000">
+                    </div>
+                </div>
+            </section>
+            <button class="pn" type="submit">Submit</button>
+        </form>
+        <!-- <div class="buttons">
+            <button class="pn">Prev</button>
+            <button class="pn">Next</button>
+        </div> -->
+    </main>
+    <footer><a href="https://www.flaticon.com/free-icons/tow" title="tow icons">Tow icon created by monkik - Flaticon</a></footer>
+</body>
+</html>

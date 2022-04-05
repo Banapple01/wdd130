@@ -1,6 +1,13 @@
 /* HTML Selectors */
+html {
+    height: 100%;
+}
+
 body {
-    font-family: 'Kalam', cursive;
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
+
 }
 
 div {
@@ -69,6 +76,7 @@ main {
 
 ol {
     list-style-type: none;
+    padding: 0;
 }
 
 /* Class Selectors */
@@ -91,6 +99,54 @@ ol {
     vertical-align: top;
 }
 
+section.chunk {
+    display: flex;
+    justify-content: center;
+}
+
+div.image {
+    display: flex;
+    justify-content: center; 
+    justify-self: center;
+    max-width: 100vh;
+}
+
+img {
+    max-width: 100%;
+}
+
+img#photo {
+    border-radius: 50%;
+    width: 40%;
+}
+
+ul.icons {
+    cursor: default;
+    list-style: none;
+    padding: 0;
+}
+
+div.items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+section.itemSpace {
+    width: 100%;
+}
+
+div.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p.about {
+    padding: 0 2em ;
+}
+
 /* Media Queries */
 @media only screen and (min-width: 32.5em) {
     nav ul {
@@ -104,5 +160,9 @@ ol {
     nav ul li {
         display: inline;
         margin: 0 10px;
+    }
+    
+    section.itemSpace {
+        width: 30%;
     }
 }
